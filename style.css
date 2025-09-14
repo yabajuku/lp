@@ -158,13 +158,38 @@ footer a {
 
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.2rem;
+    html {
+        /* 基本のフォントサイズを少し小さくし、全体を調整 */
+        font-size: 90%;
     }
+
+    h1, h2 {
+        /* 見出しの改行が不自然にならないように単語の途中での改行を許可 */
+        word-break: break-word;
+    }
+
+    .hero h1 {
+        font-size: 1.9rem; /* ヒーロー見出し */
+    }
+
+    .cta-section h2 {
+        font-size: 1.4rem; /* CTA見出し */
+    }
+
+    .benefits-section h2 {
+        font-size: 1.6rem; /* 特典見出し */
+    }
+
+    .line-button {
+        font-size: 1.1rem; /* ボタン */
+        padding: 15px 30px;
+    }
+
     .profile-section {
         flex-direction: column;
         text-align: center;
     }
+
     .benefit-items {
         flex-direction: column;
         align-items: center;
