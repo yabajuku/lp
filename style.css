@@ -61,7 +61,7 @@ a:hover {
 
 .hero h1 {
     /* clamp(最小値, 推奨値, 最大値) で流動的なフォントサイズを実現 */
-    font-size: clamp(1.8rem, 1rem + 4vw, 2.4rem);
+    font-size: clamp(2rem, 1rem + 4vw, 2.6rem);
     line-height: 1.5;
     margin-bottom: 1rem;
     color: #333;
