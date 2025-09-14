@@ -4,10 +4,24 @@ body {
     margin: 0;
     color: #333;
     line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3 {
     font-weight: bold;
+    /* 見出しの改行を自動でバランス調整（デスクトップのみ） */
+    text-wrap: balance;
+}
+
+/* 強調したいテキストの色 */
+.highlight {
+    color: #d9534f; /* 強調用の赤色 */
+}
+
+/* スマホでのみ表示される改行タグ（デフォルトでは非表示） */
+.mobile-only {
+    display: none;
 }
 
 a {
@@ -25,6 +39,15 @@ a:hover {
     padding: 40px 20px;
 }
 
+.disclaimer-top-right {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 0.75rem;
+    color: #6c757d;
+    z-index: 100;
+}
+
 /* ヒーローセクション */
 .hero {
     background-color: #f8f9fa; /* グレー系の背景色 */
@@ -37,7 +60,9 @@ a:hover {
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    /* clamp(最小値, 推奨値, 最大値) で流動的なフォントサイズを実現 */
+    font-size: clamp(1.6rem, 1rem + 3vw, 2.2rem);
+    line-height: 1.5;
     margin-bottom: 1rem;
     color: #333;
 }
@@ -50,23 +75,22 @@ a:hover {
 }
 
 .cta-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: #d9534f;
+    font-size: clamp(1.4rem, 1rem + 2vw, 1.8rem);
+    margin-top: 20px;
 }
 
 .line-button {
     display: inline-block;
     background-color: #06C755;
     color: white;
-    font-size: 1.5rem;
     font-weight: bold;
-    padding: 20px 40px;
-    border-radius: 10px;
     text-decoration: none;
-    margin-top: 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     transition: transform 0.2s;
+    border-radius: 10px;
+    /* ボタンの文字と余白も流動的に */
+    font-size: clamp(1.1rem, 1rem + 0.5vw, 1.5rem);
+    padding: clamp(15px, 1.5vh, 20px) clamp(25px, 4vw, 40px);
 }
 
 .line-button:hover {
@@ -83,7 +107,7 @@ a:hover {
 }
 
 .benefits-section h2 {
-    font-size: 2rem;
+    font-size: clamp(1.6rem, 1.2rem + 2vw, 2rem);
     margin-bottom: 30px;
 }
 
@@ -140,7 +164,7 @@ a:hover {
 .profile-section img {
     width: 150px;
     height: 150px;
-    border-radius: 15px; /* 角丸に変更 */
+    border-radius: 15px;
     object-fit: cover;
 }
 
@@ -158,33 +182,17 @@ footer a {
 
 /* レスポンシブ対応 */
 @media (max-width: 768px) {
-    html {
-        /* 基本のフォントサイズを少し小さくし、全体を調整 */
-        font-size: 90%;
+    /* 手動での改行を有効にするため、見出しの自動バランス調整を無効化 */
+    h1, h2, h3 {
+        text-wrap: unset;
     }
 
-    h1, h2 {
-        /* 見出しの改行が不自然にならないように単語の途中での改行を許可 */
-        word-break: break-word;
+    /* スマホでのみ表示される改行タグを有効化 */
+    .mobile-only {
+        display: initial;
     }
 
-    .hero h1 {
-        font-size: 1.6rem; /* ヒーロー見出し */
-    }
-
-    .cta-section h2 {
-        font-size: 1.4rem; /* CTA見出し */
-    }
-
-    .benefits-section h2 {
-        font-size: 1.6rem; /* 特典見出し */
-    }
-
-    .line-button {
-        font-size: 1.1rem; /* ボタン */
-        padding: 15px 30px;
-    }
-
+    /* レイアウトに関する調整 */
     .profile-section {
         flex-direction: column;
         text-align: center;
@@ -193,5 +201,9 @@ footer a {
     .benefit-items {
         flex-direction: column;
         align-items: center;
+    }
+
+    .container {
+        padding: 30px 15px;
     }
 }
