@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
+:root {
+    --primary-color: #28a745; /* LINE Green */
+    --dark-color: #333;
+    --light-color: #f4f4f4;
+    --white-color: #fff;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    margin: 0;
+    line-height: 1.8;
+    color: var(--dark-color);
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('image/teacher.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white-color);
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.cta-section, .gifts-section, .final-cta-section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.cta-section {
+    background-color: var(--light-color);
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+}
+
+.line-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    border-radius: 50px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.line-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.line-button img {
+    width: 40px;
+    margin-right: 1rem;
+}
+
+.small-text {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.gifts-section {
+    background-color: var(--white-color);
+}
+
+.gifts-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.gift-item {
+    background: var(--light-color);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.gift-title {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.gift-item h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.final-cta-section {
+    background-color: var(--dark-color);
+    color: var(--white-color);
+}
+
+footer {
+    background-color: #222;
+    color: #aaa;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* --- Responsive Styles for Mobile --- */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.1rem; /* モバイルでのインパクトと可読性を両立 */
+        line-height: 1.5;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .cta-section, .gifts-section, .final-cta-section {
+        padding: 3rem 1.5rem; /* 上下の余白を調整し、左右の余白を確保 */
+    }
+
+    h2 {
+        font-size: 1.7rem; /* 見出しを画面幅に合わせる */
+        line-height: 1.6;
+    }
+
+    .line-button {
+        font-size: 1.15rem; /* ボタンの文字サイズを調整 */
+        padding: 1rem 1.5rem; /* タップしやすいように縦の余白を確保 */
+        width: 90%;
+        box-sizing: border-box;
+    }
+
+    .line-button img {
+        width: 30px;
+        margin-right: 0.8rem;
+    }
+
+    .gifts-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem; /* カード間の余白を調整 */
+    }
+
+    .gift-item {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1.5rem; /* カード内の余白を調整 */
+    }
+
+    .gift-item h3 {
+        font-size: 1.2rem;
+    }
+}
