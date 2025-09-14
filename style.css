@@ -1,195 +1,172 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
-
-:root {
-    --primary-color: #28a745; /* LINE Green */
-    --dark-color: #333;
-    --light-color: #f4f4f4;
-    --white-color: #fff;
-}
-
+/* 基本スタイル */
 body {
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Helvetica Neue', 'Arial', 'Hiragino Sans', 'Meiryo', sans-serif;
     margin: 0;
+    color: #333;
     line-height: 1.8;
-    color: var(--dark-color);
 }
 
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* ヒーローセクション */
 .hero {
-    height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('image/teacher.png');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: var(--white-color);
-}
-
-.hero-content h1 {
-    font-size: 3rem;
-    font-weight: 900;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-}
-
-.hero-content p {
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-.cta-section, .gifts-section, .final-cta-section {
-    padding: 4rem 2rem;
+    background-color: #f8f9fa; /* グレー系の背景色 */
+    padding: 80px 20px;
     text-align: center;
 }
 
-.cta-section {
-    background-color: var(--light-color);
+.hero-content {
+    padding: 20px;
 }
 
-h2 {
+.hero h1 {
     font-size: 2.5rem;
-    font-weight: 900;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* CTAセクション */
+.cta-section {
+    background-color: #f8f9fa;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #d9534f;
 }
 
 .line-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--primary-color);
-    color: var(--white-color);
+    display: inline-block;
+    background-color: #06C755;
+    color: white;
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: bold;
+    padding: 20px 40px;
+    border-radius: 10px;
     text-decoration: none;
-    padding: 1rem 3rem;
-    border-radius: 50px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    margin-top: 1.5rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
 }
 
 .line-button:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    color: white;
+    text-decoration: none;
 }
 
-.line-button img {
-    width: 40px;
-    margin-right: 1rem;
+/* 特典セクション */
+.benefits-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
 }
 
-.small-text {
-    margin-top: 1rem;
-    font-size: 0.9rem;
-    color: #666;
+.benefits-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
 }
 
-.gifts-section {
-    background-color: var(--white-color);
-}
-
-.gifts-container {
+.benefit-items {
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    margin-top: 3rem;
+    gap: 30px;
     flex-wrap: wrap;
 }
 
-.gift-item {
-    background: var(--light-color);
-    padding: 2rem;
+.benefit-item {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
     border-radius: 10px;
-    width: 400px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    text-align: left;
+    padding: 30px;
+    max-width: 350px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.gift-title {
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    display: inline-block;
-    padding: 0.3rem 1rem;
-    border-radius: 20px;
-    font-weight: 700;
-    margin-bottom: 1rem;
+.benefit-item h3 {
+    color: #007bff;
+    margin-bottom: 15px;
 }
 
-.gift-item h3 {
-    font-size: 1.4rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+/* コンテンツセクション */
+.content-section {
+    padding: 50px 20px;
 }
 
-.final-cta-section {
-    background-color: var(--dark-color);
-    color: var(--white-color);
+.results ul {
+    list-style: none;
+    padding: 0;
 }
 
+.results li {
+    background: #e9f5ff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-left: 5px solid #007bff;
+    font-weight: bold;
+}
+
+/* プロフィールセクション */
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: #f8f9fa;
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.profile-section img {
+    width: 150px;
+    height: 150px;
+    border-radius: 15px; /* 角丸に変更 */
+    object-fit: cover;
+}
+
+/* フッター */
 footer {
-    background-color: #222;
-    color: #aaa;
+    background-color: #333;
+    color: white;
     text-align: center;
-    padding: 1.5rem;
-    font-size: 0.9rem;
+    padding: 20px;
 }
 
-/* --- Responsive Styles for Mobile --- */
+footer a {
+    color: #fff;
+}
+
+/* レスポンシブ対応 */
 @media (max-width: 768px) {
-    .hero {
-        background-position: center 30%; /* 背景画像を少し上に調整 */
-        align-items: flex-start; /* 文字の垂直方向の揃えを上揃えに変更 */
+    .hero h1 {
+        font-size: 2.2rem;
     }
-
-    .hero-content {
-        padding-top: 45vh; /* 文字コンテンツを上から45%の位置まで下げる */
-        width: 90%;
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
     }
-
-    .hero-content h1 {
-        font-size: 1.9rem; /* 顔に文字が被らないようにフォントサイズを調整 */
-        line-height: 1.5;
-    }
-
-    .hero-content p {
-        font-size: 1.1rem;
-    }
-
-    .cta-section, .gifts-section, .final-cta-section {
-        padding: 3rem 1.5rem; /* 上下の余白を調整し、左右の余白を確保 */
-    }
-
-    h2 {
-        font-size: 1.7rem; /* 見出しを画面幅に合わせる */
-        line-height: 1.6;
-    }
-
-    .line-button {
-        font-size: 1.15rem; /* ボタンの文字サイズを調整 */
-        padding: 1rem 1.5rem; /* タップしやすいように縦の余白を確保 */
-        width: 90%;
-        box-sizing: border-box;
-    }
-
-    .line-button img {
-        width: 30px;
-        margin-right: 0.8rem;
-    }
-
-    .gifts-container {
+    .benefit-items {
         flex-direction: column;
         align-items: center;
-        gap: 1.5rem; /* カード間の余白を調整 */
-    }
-
-    .gift-item {
-        width: 100%;
-        box-sizing: border-box;
-        padding: 1.5rem; /* カード内の余白を調整 */
-    }
-
-    .gift-item h3 {
-        font-size: 1.2rem;
     }
 }
