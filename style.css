@@ -137,8 +137,18 @@ footer {
 
 /* --- Responsive Styles for Mobile --- */
 @media (max-width: 768px) {
+    .hero {
+        background-position: center 30%; /* 背景画像を少し上に調整 */
+        align-items: flex-start; /* 文字の垂直方向の揃えを上揃えに変更 */
+    }
+
+    .hero-content {
+        padding-top: 45vh; /* 文字コンテンツを上から45%の位置まで下げる */
+        width: 90%;
+    }
+
     .hero-content h1 {
-        font-size: 2.1rem; /* モバイルでのインパクトと可読性を両立 */
+        font-size: 1.9rem; /* 顔に文字が被らないようにフォントサイズを調整 */
         line-height: 1.5;
     }
 
