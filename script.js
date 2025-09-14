@@ -7,5 +7,5 @@ console.log("最短最速学習塾 LP script loaded.");
 
 document.querySelectorAll('.line-button').forEach(button => {
     // 注意：下記のURLはダミーです。実際のLINE登録URLに書き換えてください。
-    button.href = 'https://line.me/R/ti/p/YOUR_LINE_ID';
+    button.href = 'https://manager.line.biz/account/@znw9987e';
 });
