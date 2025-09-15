@@ -50,7 +50,7 @@ a:hover {
 
 /* ヒーローセクション */
 .hero {
-    background-color: #f8f9fa; /* グレー系の背景色 */
+    background-color: #fff; /* グレー系の背景色 */
     padding: 50px 20px;
     text-align: center;
 }
