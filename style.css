@@ -58,6 +58,11 @@ a:hover {
 .hero-content {
     padding: 20px;
 }
+/* ロゴ */
+.hero-logo {
+    max-width: 200px; /* ロゴの最大幅 */
+    margin-bottom: 20px; /* ロゴと見出しの間の余白 */
+}
 
 .hero h1 {
     /* clamp(最小値, 推奨値, 最大値) で流動的なフォントサイズを実現 */
