@@ -63,6 +63,7 @@ a:hover {
     /* clamp(最小値, 推奨値, 最大値) で流動的なフォントサイズを実現 */
     font-size: clamp(1.6rem, 1rem + 2vw, 2rem);
     line-height: 1.5;
+    margin-top: 20px;
     margin-bottom: 1rem;
     color: #333;
 }
