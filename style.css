@@ -105,6 +105,36 @@ a:hover {
     text-decoration: none;
 }
 
+.branch {
+    display: inline-block;
+    margin: auto;
+    background-color: #d9534f;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+    margin: 0 auto;
+    border-radius: 10px;
+    font-size: clamp(1.05rem, 1rem + 0.3vw, 1.4rem);
+    padding: clamp(15px, 1.5vh, 20px) clamp(25px, 4vw, 40px);
+}
+
+.branch:hover {
+    transform: scale(1.05);
+    color: white;
+    text-decoration: none;
+}
+
+.branch-h {
+    font-weight: bold;
+    line-height: 50%;
+}
+
+.branch-t {
+    line-height: 60%;
+}
+
 /* 特典セクション */
 .benefits-section {
     padding: 50px 20px;
@@ -165,6 +195,19 @@ a:hover {
     padding: 40px;
     border-radius: 10px;
     margin-top: 40px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.larger {
+    font-size: 1.5rem;
+}
+
+.bold {
+    font-weight: bold;
+    padding: 0 5px;
 }
 
 .profile-section img {
