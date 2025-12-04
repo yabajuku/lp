@@ -1,0 +1,258 @@
+/* 基本スタイル */
+body {
+    font-family: 'Helvetica Neue', 'Arial', 'Hiragino Sans', 'Meiryo', sans-serif;
+    margin: 0;
+    color: #333;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+    /* 見出しの改行を自動でバランス調整（デスクトップのみ） */
+    text-wrap: balance;
+}
+
+/* 強調したいテキストの色 */
+.highlight {
+    color: #d9534f; /* 強調用の赤色 */
+}
+
+/* スマホでのみ表示される改行タグ（デフォルトでは非表示） */
+.mobile-only {
+    display: none;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.disclaimer-top-right {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 0.75rem;
+    color: #6c757d;
+    z-index: 100;
+}
+
+/* ヒーローセクション */
+.hero {
+    background-color: #fff; /* グレー系の背景色 */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.hero-content {
+    padding: 20px;
+}
+/* ロゴ */
+.hero-logo {
+    max-width: 200px; /* ロゴの最大幅 */
+    margin-bottom: 20px; /* ロゴと見出しの間の余白 */
+}
+
+.hero h1 {
+    /* clamp(最小値, 推奨値, 最大値) で流動的なフォントサイズを実現 */
+    font-size: clamp(1.6rem, 1rem + 2vw, 2rem);
+    line-height: 1.5;
+    margin-top: 20px;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* CTAセクション */
+.cta-section {
+    background-color: #f8f9fa;
+    padding: 0px 20px 30px 20px; /* 上部の余白を縮小 */
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: clamp(1.4rem, 1rem + 2vw, 1.8rem);
+    margin-top: 20px;
+}
+
+.line-button {
+    display: inline-block;
+    background-color: #06C755;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+    border-radius: 10px;
+    /* ボタンの文字と余白も流動的に */
+    font-size: clamp(1.1rem, 1rem + 0.5vw, 1.5rem);
+    padding: clamp(15px, 1.5vh, 20px) clamp(25px, 4vw, 40px);
+}
+
+.line-button:hover {
+    transform: scale(1.05);
+    color: white;
+    text-decoration: none;
+}
+
+.branch {
+    display: inline-block;
+    margin: auto;
+    background-color: #d9534f;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+    margin: 0 auto;
+    border-radius: 10px;
+    font-size: clamp(1.05rem, 1rem + 0.3vw, 1.4rem);
+    padding: clamp(15px, 1.5vh, 20px) clamp(25px, 4vw, 40px);
+}
+
+.branch:hover {
+    transform: scale(1.05);
+    color: white;
+    text-decoration: none;
+}
+
+.branch-h {
+    font-weight: bold;
+    line-height: 50%;
+}
+
+.branch-t {
+    line-height: 60%;
+}
+
+/* 特典セクション */
+.benefits-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.benefits-section h2 {
+    font-size: clamp(1.6rem, 1.2rem + 2vw, 2rem);
+    margin-bottom: 30px;
+}
+
+.benefit-items {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.benefit-item {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 350px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.benefit-item h3 {
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+/* コンテンツセクション */
+.content-section {
+    padding: 50px 20px;
+}
+
+.results ul {
+    list-style: none;
+    padding: 0;
+}
+
+.results li {
+    background: #e9f5ff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-left: 5px solid #007bff;
+    font-weight: bold;
+}
+
+/* プロフィールセクション */
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: #f8f9fa;
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.larger {
+    font-size: 1.5rem;
+}
+
+.bold {
+    font-weight: bold;
+    padding: 0 5px;
+}
+
+.profile-section img {
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* フッター */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #fff;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    /* 手動での改行を有効にするため、見出しの自動バランス調整を無効化 */
+    h1, h2, h3 {
+        text-wrap: unset;
+    }
+
+    /* スマホでのみ表示される改行タグを有効化 */
+    .mobile-only {
+        display: initial;
+    }
+
+    /* レイアウトに関する調整 */
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .benefit-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container {
+        padding: 30px 15px;
+    }
+}
